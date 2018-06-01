@@ -13,9 +13,15 @@ sudo python thingToBeLaunched.py
 cd /
 ```
 Change permissions
+
 `chmod 755 launcher.sh`
+
 Edit crontab
+
 `sudo crontab -e`
+
 Add this line to the end
+
 `@reboot sh /home/pi/launcher.sh >/home/pi/logs/cronlog 2>&1`
+
 Notice, that will dump errors into your logs directory.  Make sure you have a logs directory.
