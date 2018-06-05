@@ -31,7 +31,6 @@ draw.rectangle((0,0,width,height), outline=0, fill=0)
 font = ImageFont.truetype('AldotheApache.ttf', 15)
 lineSpacing = 15
 
-
 app = Flask(__name__)
 
 @app.route('/')
@@ -51,16 +50,12 @@ def write_to_screen():
 
 @app.route('/input/<text>/')
 def other(text):
-    #text = request.form('text')
-    print('Your string is {0}'.format(text))
     draw.rectangle((0,0,width,height), outline=0, fill=0)
     draw.text((10, 10), text, font=font, fill=255)
     # Display image.
     disp.image(image)
     disp.display()
-    text = request.form('text')
     return render_template('index.html')
-
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)
