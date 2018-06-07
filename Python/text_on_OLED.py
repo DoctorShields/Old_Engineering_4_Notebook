@@ -35,7 +35,7 @@ draw.rectangle((0,0,width,height), outline=0, fill=0)
 font = ImageFont.truetype('AldotheApache.ttf', 15)
 lineSpacing = 15
 
-draw.text((10, 10), 'Here is some text', font=font, fill=255)
+draw.text((10, 10), 'Push a button! ', font=font, fill=255)
 
 # Display image.
 disp.image(image)
